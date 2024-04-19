@@ -1,0 +1,27 @@
+/* Alberto Núñez García - UO258455*/
+body { /* a = 0 ; b = 0 ; c = 1*/
+    font: 100% Tahoma, sans-serif; /*Familia sans-serif*/ /*400 15px*/ 
+    line-height: 1.8;
+}
+h1 { /* a = 0 ; b = 0 ; c = 1 */
+    text-transform: uppercase;
+    /*padding: auto;*/
+    text-align: center;
+    background-position: center;     
+}
+h2,h3 { /* a = 0 ; b = 0 ; c = 1 */
+    text-align: left;     
+}
+nav ul { /* a = 0 ; b = 0 ; c = 2 */ 
+    list-style-type: none;
+    overflow: hidden;
+}
+nav li { /* a = 0 ; b = 0 ; c = 2 */
+    text-align: center;
+    text-transform: uppercase;
+    font: 1.75vw Tahoma, sans-serif; /*300 20px*/
+    font-weight: bold;
+}
+a:link{ /* a = 0 ; b = 1 ; c = 1 */
+    text-decoration: none;
+}
