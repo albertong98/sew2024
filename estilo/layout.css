@@ -5,6 +5,9 @@ body{ /* a = 0 ; b = 0 ; c = 1*/
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
+nav li{/* a = 0 ; b = 0 ; c = 2 */
+    grid-column: span 2;     
+}
 header{ /* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1 ;
     grid-column-end: 5;
@@ -23,10 +26,20 @@ footer { /* a = 0 ; b = 0 ; c = 1 */
     grid-row-start: 3;
     grid-row-end: 3;
 }
-
-dl{
+dl{/* a = 0 ; b = 0 ; c = 1 */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    grid-row: 1;
+}
+dt{/* a = 0 ; b = 0 ; c = 1 */
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+dd{/* a = 0 ; b = 0 ; c = 1 */
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+video{/* a = 0 ; b = 0 ; c = 1 */
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
