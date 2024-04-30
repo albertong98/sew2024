@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas>
+    <ruta>
+        <nombre></nombre>
+        <tipo></tipo>
+        <medio></medio>
+        <duracion unidades=""></duracion>
+        <agencia></agencia>
+        <descripcion></descripcion>
+        <personasAdecuadas></personasAdecuadas>
+        <inicio>
+            <fecha></fecha>
+            <hora></hora>
+            <coordenadas>
+                    <latitud>42.3826</latitud>
+                    <longitud>-7.12588</longitud>
+                    <altitud unidades="m">1</altitud>
+            </coordenadas>
+            <lugar>a</lugar>
+            <direccion></direccion>
+        </inicio>
+        <referencias>
+        
+        </referencias>
+        <recomendacion></recomendacion>
+        <hitos>
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+
+                </descripcion>
+                <distancia unidades="km">0</distancia>
+                <coordenadas>
+                    <latitud>42.4129300</latitud>
+                    <longitud>-7.1231000</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                <!-- NOTA PARA MI: NO INCLUIR ENLACES, SOLO ARCHIVO LOCAL -->
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                </fotos>
+                <videos>
+                
+                </videos>
+            </hito>
+            
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+                 
+                </descripcion>
+                <distancia unidades="km"></distancia>
+                <coordenadas>
+                    <latitud>42.4327200</latitud>
+                    <longitud>-6.9686800</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                 
+                </fotos>
+                <videos>
+                    <video></video>
+                </videos>
+            </hito>
+
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+                </descripcion>
+                <distancia unidades="km"></distancia>
+                <coordenadas>
+                    <latitud>42.5466400</latitud>
+                    <longitud>-6.5961900</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                </fotos>
+                <videos>
+
+                </videos>
+            </hito>
+        </hitos>
+    </ruta>
+
+    
+    
+    <ruta>
+        <nombre></nombre>
+        <tipo></tipo>
+        <medio></medio>
+        <duracion unidades=""></duracion>
+        <agencia></agencia>
+        <descripcion></descripcion>
+        <personasAdecuadas></personasAdecuadas>
+        <inicio>
+            <fecha></fecha>
+            <hora></hora>
+            <coordenadas>
+                    <latitud>42.3826</latitud>
+                    <longitud>-7.12588</longitud>
+                    <altitud unidades="m">1</altitud>
+            </coordenadas>
+            <lugar>a</lugar>
+            <direccion></direccion>
+        </inicio>
+        <referencias>
+        
+        </referencias>
+        <recomendacion></recomendacion>
+        <hitos>
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+
+                </descripcion>
+                <distancia unidades="km">0</distancia>
+                <coordenadas>
+                    <latitud>42.4129300</latitud>
+                    <longitud>-7.1231000</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                <!-- NOTA PARA MI: NO INCLUIR ENLACES, SOLO ARCHIVO LOCAL -->
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                </fotos>
+                <videos>
+                
+                </videos>
+            </hito>
+            
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+                 
+                </descripcion>
+                <distancia unidades="km"></distancia>
+                <coordenadas>
+                    <latitud>42.4327200</latitud>
+                    <longitud>-6.9686800</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                 
+                </fotos>
+                <videos>
+                    <video></video>
+                </videos>
+            </hito>
+
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+                </descripcion>
+                <distancia unidades="km"></distancia>
+                <coordenadas>
+                    <latitud>-6.5961900</latitud>
+                    <longitud>42.5466400</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                </fotos>
+                <videos>
+
+                </videos>
+            </hito>
+        </hitos>
+    </ruta>
+
+    
+    
+       <ruta>
+        <nombre></nombre>
+        <tipo></tipo>
+        <medio></medio>
+        <duracion unidades=""></duracion>
+        <agencia></agencia>
+        <descripcion></descripcion>
+        <personasAdecuadas></personasAdecuadas>
+        <inicio>
+            <fecha></fecha>
+            <hora></hora>
+            <coordenadas>
+                    <latitud>42.3826</latitud>
+                    <longitud>-7.12588</longitud>
+                    <altitud unidades="m">1</altitud>
+            </coordenadas>
+            <lugar>a</lugar>
+            <direccion></direccion>
+        </inicio>
+        <referencias>
+        
+        </referencias>
+        <recomendacion></recomendacion>
+        <hitos>
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+
+                </descripcion>
+                <distancia unidades="km">0</distancia>
+                <coordenadas>
+                    <latitud>42.4129300</latitud>
+                    <longitud>-7.1231000</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                <!-- NOTA PARA MI: NO INCLUIR ENLACES, SOLO ARCHIVO LOCAL -->
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                </fotos>
+                <videos>
+                
+                </videos>
+            </hito>
+            
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+                 
+                </descripcion>
+                <distancia unidades="km"></distancia>
+                <coordenadas>
+                    <latitud>42.4327200</latitud>
+                    <longitud>-6.9686800</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                 
+                </fotos>
+                <videos>
+                    <video></video>
+                </videos>
+            </hito>
+
+            <hito>
+                <nombre>a</nombre>
+                <descripcion>
+                </descripcion>
+                <distancia unidades="km"></distancia>
+                <coordenadas>
+                    <latitud>-6.5961900</latitud>
+                    <longitud>42.5466400</longitud>
+                    <altitud unidades="m">1</altitud>
+                </coordenadas>
+                <fotos>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                    <foto titulo=""></foto>
+                </fotos>
+                <videos>
+
+                </videos>
+            </hito>
+        </hitos>
+    </ruta>
+
+</rutas>
