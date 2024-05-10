@@ -35,7 +35,7 @@ class XML2KML {
                     stringDatos += "<coordinates>\n";
                     stringDatos += longitudInicio+","+latitudInicio+","+altitudInicio+"\n";
                     
-                    $(this).find('hitos').each(() => {
+                    $(this).find('hitos').find('hito').each(() => {
                         let coordenadasHito = $(this).find('coordenadas');
                         let latitudHito = coordenadasHito.find('latitud').text();
                         let longitudHito = coordenadasHito.find('longitud').text();

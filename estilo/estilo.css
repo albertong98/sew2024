@@ -5,7 +5,7 @@ body { /* a = 0 ; b = 0 ; c = 1*/
     color: #030101;
     background-color:#fefefe;
 }
-h1,h2,h3,nav{
+h1,h2,h3,nav{/* a = 0 ; b = 0 ; c = 1 */
     background-color:#fecece;
     color: rgb(0, 0, 0);
     border-radius: 15px;
@@ -80,13 +80,18 @@ dt{/* a = 0 ; b = 0 ; c = 1 */
 dd{/* a = 0 ; b = 0 ; c = 1 */
     border-right: 1px solid black;
 }
-img {/* a = 0 ; b = 0 ; c = 1 */
+dd img {/* a = 0 ; b = 0 ; c = 2 */
     width:  400px;
     height: auto;
     margin-top: 3%;
 }
-video{
+video{/* a = 0 ; b = 0 ; c = 1 */
     min-width: 50%; 
     width: auto; 
     height: auto; 
+}
+aside{/* a = 0 ; b = 0 ; c = 1 */
+    background-color: #fecece;
+    color:#000;
+    border-radius: 15px;
 }

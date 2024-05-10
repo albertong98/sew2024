@@ -4,6 +4,13 @@ body{ /* a = 0 ; b = 0 ; c = 1*/
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
 }
 nav li{/* a = 0 ; b = 0 ; c = 2 */
     grid-column: span 2;     
@@ -16,15 +23,21 @@ header{ /* a = 0 ; b = 0 ; c = 1 */
 }
 article{ /* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: -1;
     grid-row-start: 2 ;
+    grid-row-end: 3;
+}
+aside{/* a = 0 ; b = 0 ; c = 1 */
+    grid-column-start: 4;
+    grid-column-end: auto;
+    grid-row-start: 2;
     grid-row-end: 3;
 }
 footer { /* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1 ;
     grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
 }
 dl{/* a = 0 ; b = 0 ; c = 1 */
     display: grid;
@@ -42,4 +55,7 @@ dd{/* a = 0 ; b = 0 ; c = 1 */
 video{/* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1;
     grid-column-end: 5;
+}
+section{
+    grid-row-start: 3;
 }

@@ -5,11 +5,11 @@ class XML2HTML{
     }
 
     cargarDatos(){
-        $ajax({
+        $.ajax({
             dataType: 'xml',
             url: 'xml/rutas.xml',
             method: 'GET',
-            succes: function(datos) {
+            success: function(datos) {
                 var stringDatos = '';
                 $('ruta',datos).each(function(ruta){
                     var nombre = $('nombre',ruta).text();
