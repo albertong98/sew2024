@@ -2,268 +2,252 @@
 <!DOCTYPE rutas SYSTEM "rutas.dtd">
 <rutas>
     <ruta>
-        <nombre></nombre>
-        <tipo></tipo>
-        <medio></medio>
-        <duracion unidades=""></duracion>
-        <agencia></agencia>
-        <descripcion></descripcion>
-        <personasAdecuadas></personasAdecuadas>
+        <nombre>La IV Carrera Cívico Militar “Cuna de la Legión” en Ceuta</nombre>
+        <tipo>Senderismo</tipo>
+        <medio>A pie</medio>
+        <duracion unidades="horas">9</duracion>
+        <agencia>Instituto Ceutí de Deportes</agencia>
+        <descripcion>La IV Carrera Cívico Militar “Cuna de la Legión”, prueba organizada por el Instituto Ceutí de Deportes y el Tercio Duque de Alba “2º de La Legión, es una carrera de ultrafondo, que se celebró el sábado día 2 de marzo de 2019, con salida y meta en la Plaza de Armas del Complejo Monumental de las Murallas Reales.</descripcion>
+        <personasAdecuadas>Personas con buena resistencia física</personasAdecuadas>
         <inicio>
-            <fecha></fecha>
-            <hora></hora>
+            <fecha>3 de marzo de 2019</fecha>
+            <hora>10:00</hora>
             <coordenadas>
-                    <latitud>42.3826</latitud>
-                    <longitud>-7.12588</longitud>
+                    <latitud>35.888380</latitud>
+                    <longitud>-5.319370</longitud>
                     <altitud unidades="m">1</altitud>
             </coordenadas>
-            <lugar>a</lugar>
-            <direccion></direccion>
+            <lugar>Servicios de Museos de Ceuta</lugar>
+            <direccion>Av. San Francisco Javier 2-3</direccion>
         </inicio>
         <referencias>
-        
+            <referencia>https://es.wikiloc.com/rutas-senderismo/la-iv-carrera-civico-militar-cuna-de-la-legion-en-ceuta-33755772</referencia>
+            <referencia>https://www.ceuta.es/ceuta/museos-ceuta</referencia>
+            <referencia>https://www.ceutaturistica.com/fortaleza/fortaleza.html</referencia>
         </referencias>
-        <recomendacion></recomendacion>
+        <recomendacion>5</recomendacion>
         <hitos>
             <hito>
-                <nombre>a</nombre>
+                <nombre>La Casa de los Dragones</nombre>
                 <descripcion>
-
+                    Edificio historicista de tres plantas, uno de los más emblemáticos de la ciudad de Ceuta. Situada haciendo esquina entre las calles Camoens y Millan Astrains y muy próxima a la denominada Plaza de los Reyes, fue encargada su construcción en 1900 por D. Francisco Cerni González, Alcalde de Ceuta entre 1897 y 1903 y su hermano Ricardo, figurando en la esquina inferior de su fachada el escudo familiar con sus iniciales (RFC). 
                 </descripcion>
-                <distancia unidades="km">0</distancia>
+                <distancia unidades="km">1,2</distancia>
                 <coordenadas>
-                    <latitud>42.4129300</latitud>
-                    <longitud>-7.1231000</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.8875</latitud>
+                    <longitud>-5.308889</longitud>
+                    <altitud unidades="m">30</altitud>
                 </coordenadas>
                 <fotos>
-                <!-- NOTA PARA MI: NO INCLUIR ENLACES, SOLO ARCHIVO LOCAL -->
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
+                    <foto titulo="Casa de los dragones">casa_de_los_dragones.jpg</foto>
+                    <foto titulo="Dragon">dragon.jpg</foto>
                 </fotos>
-                <videos>
-                
-                </videos>
             </hito>
             
             <hito>
-                <nombre>a</nombre>
+                <nombre>Fortaleza del Monte Hacho</nombre>
                 <descripcion>
-                 
+                 Se sitúa sobre el monte Hacho, a unos 190 metros de altura y 800 de distancia del casco urbano de Ceuta contando con un perímetro aproximado de 1.550 metros y una superficie de 108.291 metros cuadrados. Según algunos autores, fue construida originalmente por los romanos durante los primeros siglos de nuestra Era y luego restaurada, ampliada y mejorada por los bizantinos del emperador Justiniano I (año 531) quien envió al más insigne de sus generales , Belisario, con la misión de destruir el imperio de los Vándalos en el Norte de África.
                 </descripcion>
-                <distancia unidades="km"></distancia>
+                <distancia unidades="km">2,6</distancia>
                 <coordenadas>
-                    <latitud>42.4327200</latitud>
-                    <longitud>-6.9686800</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.896157</latitud>
+                    <longitud>-5.290658</longitud>
+                    <altitud unidades="m">190</altitud>
                 </coordenadas>
                 <fotos>
-                 
+                    <foto titulo="Fortaleza del Monte Hacho">fortaleza.jpg</foto>
+                    <foto titulo="Cañon en la fortalexa">canon.jpg</foto>
                 </fotos>
-                <videos>
-                    <video></video>
-                </videos>
             </hito>
 
             <hito>
-                <nombre>a</nombre>
+                <nombre>Estatua de Hércules</nombre>
                 <descripcion>
+                    Separación y unión de dos continentes: Europa y África, por medio de la mítica figura de Hércules
                 </descripcion>
-                <distancia unidades="km"></distancia>
+                <distancia unidades="km">2,9</distancia>
                 <coordenadas>
-                    <latitud>42.5466400</latitud>
-                    <longitud>-6.5961900</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.888431</latitud>
+                    <longitud>-5.313455</longitud>
+                    <altitud unidades="m">3</altitud>
                 </coordenadas>
                 <fotos>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
+                    <foto titulo="Hercules">hercules.jpg</foto>
                 </fotos>
-                <videos>
+            </hito>
 
-                </videos>
+            <hito>
+                <nombre>Mirador de Isabel II</nombre>
+                <descripcion>
+                    Desde el mirador de Isabel II podremos divisar una increible vista panorámica de la ciudad de Ceuta constituida por una península con el Monte Hacho al fondo, la zona de la Almina, el estrechamiento del Istmo y la zona campo exterior todo ello rodeada por su bahía su bahía norte y sur.
+                </descripcion>
+                <distancia unidades="km">6,3</distancia>
+                <coordenadas>
+                    <latitud>35.892489</latitud>
+                    <longitud>-5.363697</longitud>
+                    <altitud unidades="m">244</altitud>
+                </coordenadas>
+                <fotos>
+                    <foto titulo="Mirador de Isabel II">mirador.jpg</foto>
+                    <foto titulo="Vistas desde el mirador de Isabel II">vista.jpg</foto>
+                </fotos>
             </hito>
         </hitos>
     </ruta>
-
-    
     
     <ruta>
-        <nombre></nombre>
-        <tipo></tipo>
-        <medio></medio>
-        <duracion unidades=""></duracion>
-        <agencia></agencia>
-        <descripcion></descripcion>
-        <personasAdecuadas></personasAdecuadas>
+        <nombre>Puerto - Playa San Amaro - Castillo Desnarigado - Monte Hacho</nombre>
+        <tipo>BTT</tipo>
+        <medio>Bicileta</medio>
+        <duracion unidades="minutos">182</duracion>
+        <agencia>AllTrails</agencia>
+        <descripcion>Ve a la aventura en esta ruta circular de 10,5-km cerca de Ceuta, Ceuta. Por lo general, se considera una ruta difícil, que se tarda una media de 3 h 9 min en recorrer. Esta ruta es excelente para el senderismo y correr, y es poco probable encontrarse con otras personas mientras se recorre.</descripcion>
+        <personasAdecuadas>Personas a las que les guste el ciclismo</personasAdecuadas>
         <inicio>
-            <fecha></fecha>
-            <hora></hora>
+            <fecha>15/05/2024</fecha>
+            <hora>15:00</hora>
             <coordenadas>
-                    <latitud>42.3826</latitud>
-                    <longitud>-7.12588</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.899516</latitud>
+                    <longitud>-5.294850</longitud>
+                    <altitud unidades="m">5</altitud>
             </coordenadas>
-            <lugar>a</lugar>
-            <direccion></direccion>
+            <lugar>Urbanización San Antonio</lugar>
+            <direccion>Ctra. San Antonio, 55</direccion>
         </inicio>
         <referencias>
-        
+            <referencia>https://www.alltrails.com/es/ruta/spain/ceuta/puerto-playa-san-amaro-castillo-desnarigado-monte-hacho</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Fuerte_del_Desnarigado</referencia>
+            <referencia>https://es.wikipedia.org/wiki/San_Amaro_(playa)</referencia>
         </referencias>
-        <recomendacion></recomendacion>
+        <recomendacion>7</recomendacion>
         <hitos>
             <hito>
-                <nombre>a</nombre>
+                <nombre>Playa San Amaro</nombre>
                 <descripcion>
-
+                    Playa bonita, limpia y con acceso facil.
                 </descripcion>
                 <distancia unidades="km">0</distancia>
                 <coordenadas>
-                    <latitud>42.4129300</latitud>
-                    <longitud>-7.1231000</longitud>
+                    <latitud>35.899771</latitud>
+                    <longitud>-5.299532</longitud>
                     <altitud unidades="m">1</altitud>
                 </coordenadas>
                 <fotos>
-                <!-- NOTA PARA MI: NO INCLUIR ENLACES, SOLO ARCHIVO LOCAL -->
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
+                    <foto titulo="Playa de San Amaro">san_amaro.jpg</foto>
                 </fotos>
-                <videos>
-                
-                </videos>
             </hito>
             
             <hito>
-                <nombre>a</nombre>
+                <nombre>Castillo Desnarigado</nombre>
                 <descripcion>
-                 
+                 El fuerte del Desnarigado es un fuerte, reconvertido en museo, situado en el borde litoral del frente sur del monte Hacho, en Ceuta. Posee una superficie de 1280 metros cuadrados.
                 </descripcion>
-                <distancia unidades="km"></distancia>
+                <distancia unidades="km">2,8</distancia>
                 <coordenadas>
-                    <latitud>42.4327200</latitud>
-                    <longitud>-6.9686800</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.894581</latitud>
+                    <longitud>-5.281606</longitud>
+                    <altitud unidades="m">10</altitud>
                 </coordenadas>
                 <fotos>
-                 
+                    <foto titulo="Castillo Desnarigado">castillo.jpg</foto>
                 </fotos>
-                <videos>
-                    <video></video>
-                </videos>
             </hito>
 
             <hito>
-                <nombre>a</nombre>
+                <nombre>Monte Hacho</nombre>
                 <descripcion>
+                    El Monte Hacho es una montaña baja que se encuentra en la península de Almina de la ciudad española de Ceuta. Está situado en la costa mediterránea en el estrecho de Gibraltar frente al peñón del mismo nombre.
                 </descripcion>
                 <distancia unidades="km"></distancia>
                 <coordenadas>
-                    <latitud>-6.5961900</latitud>
-                    <longitud>42.5466400</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.896157</latitud>
+                    <longitud>-5.290658</longitud>
+                    <altitud unidades="m">190</altitud>
                 </coordenadas>
                 <fotos>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
+                    <foto titulo="Monte Hacho">monte.jpg</foto>
                 </fotos>
-                <videos>
-
-                </videos>
             </hito>
         </hitos>
     </ruta>
 
-    
-    
-       <ruta>
-        <nombre></nombre>
-        <tipo></tipo>
-        <medio></medio>
-        <duracion unidades=""></duracion>
-        <agencia></agencia>
-        <descripcion></descripcion>
-        <personasAdecuadas></personasAdecuadas>
+    <ruta>
+        <nombre>Punta Almina - Ceuta - Fronteriza - El Príncipe</nombre>
+        <tipo>Circular</tipo>
+        <medio>Coche</medio>
+        <duracion unidades="horas">2</duracion>
+        <agencia>AllTrails</agencia>
+        <descripcion>Descubre esta ruta circular de 40,4-km cerca de Ceuta. La ruta está abierta todo el año y es perfecta para visitar en cualquier momento.</descripcion>
+        <personasAdecuadas>Personas que dispongan de un vehiculo</personasAdecuadas>
         <inicio>
-            <fecha></fecha>
-            <hora></hora>
+            <fecha>13/07/2025</fecha>
+            <hora>12:00</hora>
             <coordenadas>
-                    <latitud>42.3826</latitud>
-                    <longitud>-7.12588</longitud>
-                    <altitud unidades="m">1</altitud>
+                <latitud>42.3826</latitud>
+                <longitud>-7.12588</longitud>
+                <altitud unidades="m">1</altitud>
             </coordenadas>
-            <lugar>a</lugar>
-            <direccion></direccion>
+            <lugar>Punta Almina</lugar>
+            <direccion>VPXC+W5, 51005 Ceuta</direccion>
         </inicio>
         <referencias>
-        
+            <referencia>https://www.alltrails.com/es/ruta/spain/ceuta/punta-almina-ceuta-fronteriza-el-principe</referencia>
+            <referencia>https://elpueblodeceuta.es/archive/22437/el-fortin-de-la-palmera-un-patrimonio-historico-que-esta-okupado</referencia>
+            <referencia>https://www.ceutaactualidad.com/articulo/editorial/principe-laberinto-topicos-realidades/20240126190939189594.html</referencia>
         </referencias>
-        <recomendacion></recomendacion>
+        <recomendacion>10</recomendacion>
         <hitos>
             <hito>
-                <nombre>a</nombre>
+                <nombre>Ceuta</nombre>
                 <descripcion>
-
+                    Ceuta es una ciudad autónoma española, situada en la península tingitana, en la orilla africana del estrecho de Gibraltar, en el lado oriental de este. Está bañada por las aguas del mar Mediterráneo, mientras que al oeste y suroeste limita con Marruecos. 
                 </descripcion>
                 <distancia unidades="km">0</distancia>
                 <coordenadas>
-                    <latitud>42.4129300</latitud>
-                    <longitud>-7.1231000</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.886667</latitud>
+                    <longitud>-5.3</longitud>
+                    <altitud unidades="m">10</altitud>
                 </coordenadas>
                 <fotos>
-                <!-- NOTA PARA MI: NO INCLUIR ENLACES, SOLO ARCHIVO LOCAL -->
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
+                    <foto titulo="Ceuta">ceuta.jpg</foto>
                 </fotos>
                 <videos>
-                
+                    <video type="video/mp4">gastronomia.mp4</video>
                 </videos>
             </hito>
             
             <hito>
-                <nombre>a</nombre>
+                <nombre>Fortín y batería de la Palmera</nombre>
                 <descripcion>
-                 
+                 El fortín y batería de la Palmera se encuentra a 100 metros sobre el nivel del mar, frente a la costa, a los pies del monte Hacho, entre los fuertes de Sarchal y Desnarigado, en la ciudad autónoma de Ceuta, formando parte del conjunto monumental del Recinto del Hacho.
                 </descripcion>
                 <distancia unidades="km"></distancia>
                 <coordenadas>
-                    <latitud>42.4327200</latitud>
-                    <longitud>-6.9686800</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.891498</latitud>
+                    <longitud>-5.287265</longitud>
+                    <altitud unidades="m">100</altitud>
                 </coordenadas>
                 <fotos>
-                 
+                    <foto titulo="Fortín y batería de la Palmera">fortin.jpg</foto>
                 </fotos>
-                <videos>
-                    <video></video>
-                </videos>
             </hito>
 
             <hito>
-                <nombre>a</nombre>
+                <nombre>El Príncipe</nombre>
                 <descripcion>
+                El príncipe es un barrio de clase trabajadora en el sur de la ciudad española de Ceuta, en el noroeste de África. Tiene una población mayoritariamente musulmana.
                 </descripcion>
                 <distancia unidades="km"></distancia>
                 <coordenadas>
-                    <latitud>-6.5961900</latitud>
-                    <longitud>42.5466400</longitud>
-                    <altitud unidades="m">1</altitud>
+                    <latitud>35.873257</latitud>
+                    <longitud>-5.345179</longitud>
+                    <altitud unidades="m">20</altitud>
                 </coordenadas>
                 <fotos>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
-                    <foto titulo=""></foto>
+                    <foto titulo="El barrio del Principe">principe.jpg</foto>
                 </fotos>
-                <videos>
-
-                </videos>
             </hito>
         </hitos>
     </ruta>
-
 </rutas>

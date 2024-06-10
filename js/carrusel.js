@@ -1,33 +1,22 @@
 "use strict";
 class Carrusel{
     constructor(){
-        this.imagenes = Array.from(document.querySelectorAll("article img"));
-        console.log(this.imagenes);
-        this.imagenActual = 0;
-    }
-
-    addTransicion() {
-        this.imagenes.forEach((img) => {
-          img.style.transition = "transform 0.8s ease";
-        });
-    }
-
-    reset(){
-        this.imagenes.forEach((img) => {
-            img.style.transition = "none";
-            img.style.transform = `translate(0)`;
-        });
+        this.dir = "multimedia/imagenes/"
+        this.mapa = {
+            "ceuta.jpg" : "Ciudad de ceuta",
+            "canon.jpg" : "Cañón de la fortaleza",
+            "fortin.jpg" : "Fortín y batería de la Palmera",
+            "fortaleza.jpg" : "Fortaleza del Monte Hacho",
+            "principe.jpg" : "Barrio del principe"
+        }
+        this.imagenes = ["ceuta.jpg","canon.jpg","fortin.jpg","fortaleza.jpg","principe.jpg"];
         this.imagenActual = 0;
     }
 
     cargarSiguiente(){
-        if (this.imagenActual === this.imagenes.length - 1) {
-            this.reset();
-        }else{
-            if (this.imagenActual === 0) this.addTransicion();
-            this.imagenes.forEach(img => img.style.transform = `translate(${(this.imagenActual + 1) * - 100}%)`);
-            this.imagenActual++;
-        }
+        this.imagenActual = this.imagenActual === this.imagenes.length - 1 ? 0 : this.imagenActual+1
+        document.querySelector("article > img").setAttribute("src", this.dir + this.imagenes[this.imagenActual]);
+        document.querySelector("article > img").setAttribute("alt",this.mapa[this.imagenes[this.imagenActual]]);
     }
 }
 var carrusel = new Carrusel();

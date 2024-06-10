@@ -13,7 +13,7 @@ class Noticias{
             success: function(datos){
                 var date = new Date();
                 $('aside span').last().text(date.toLocaleString('es-ES'));
-                for(var i = 0 ; i <10 ; i++){
+                for(var i = 0 ; i < 7 ; i++){
                     var article = datos.articles[i];
                     $('aside > ol').append(`<li><a href=${article.url}>${article.title}</a></li>`);
                 }

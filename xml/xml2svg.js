@@ -6,57 +6,64 @@ class XML2SVG {
     }
     
     cargarDatos(){
+        var xml2svg = this;
         $.ajax({
             dataType: "xml",
             url: 'xml/rutas.xml',
             method: 'GET',
             success: function(datos){
-                let stringDatos = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
-
-                $(datos).find("ruta").each(() => {
-                    stringDatos += "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"2.0\">\n";
+                var rutas = $('ruta',datos);
+                rutas.each(function(indice){
+                    xml2svg.altitudes.clear();
+                    let stringDatos = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"2.0\">\n";
                     stringDatos += "<polyline points=\n";
-                    
-                    let coordenadas = $(this).find('inicio').find('coordenadas');
-                    let lugarInicio = $(this).find('inicio').find('lugar').text();
+                    var inicio = $('inicio',rutas[indice]);
+                    var coordenadas = $('coordenadas',inicio);
+                    var lugarInicio = $('lugar',inicio).text();
+                    var altitudInicio = $('altitud',coordenadas).text();
 
-                    altitudes.set(lugarInicio,parseInt(coordenadas.find('altitud').text(),10));
-                    $(this).find('hitos').find('hito').each(() => {
-                        let coordenadasHito = $(this).find('coordenadas');
-                        let nombre = $(this).find('nombre').text();
-                        altitudes.set(nombre,parseInt(coordenadasHito.find('altitud').text(),10));
+                    xml2svg.altitudes.set(lugarInicio,parseInt(altitudInicio,10));
+
+                    var hitosElement = $('hitos',rutas[indice]);
+                    var hitos = $('hito',hitosElement);
+
+                    hitos.each(function(hito){
+                        var coordenadasHito = $('coordenadas',hitos[hito]);
+                        var nombreHito = $('nombre',hitos[hito]).text();
+                        var altitudHito = $('altitud',coordenadasHito).text();
+                        xml2svg.altitudes.set(nombreHito,parseInt(altitudHito,10));
                     });
 
-                    transformY();
+                    xml2svg.transformY();
 
-                    cx = 20;
+                    var cx = 20;
+                    stringDatos += "\"0,165\n"+cx+"," + xml2svg.altitudes.get(lugarInicio) + "\n"
 
-                    stringDatos += "\"0,165\n"+cx+"," + altitudes.get(lugarInicio) + "\n"
-
-                    $(this).find('hitos').find('hito').each(() => {
+                    hitos.each(function(hito){
+                        var nombreHito = $('nombre',hitos[hito]).text();
                         cx+=100;
-                        stringDatos += cx+','+altitudes.get($(this).find('nombre').text()+'\n');
+                        stringDatos += cx+','+xml2svg.altitudes.get(nombreHito)+'\n';
                     });
 
                     stringDatos +=(cx+1)+",165\n0,165\"\n";
 
-                    cx = 20;
+                    var cx = 20;
 
                     stringDatos +="style=\"fill:white;stroke:red;stroke-width:4\" />\n";
                     stringDatos += "<text x = \""+cx+"\" y = \"170\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\">\n"
                     stringDatos += "Inicio\n</text>\n";
 
-                    $(this).find('hitos').find('hito').each(() => {
+                    hitos.each(function(hito){
                         cx+=100;
-                        let nombre = $(this).find('nombre').text();
+                        var nombreHito = $('nombre',hitos[hito]).text();
                         stringDatos += "<text x = \""+cx+"\" y = \"170\" style=\"writing-mode: tb; glyph-orientation-vertical: 0;\">\n";
-                        stringDatos += nombre+"\n</text>\n";
+                        stringDatos += nombreHito+"\n</text>\n";
                     });
                     stringDatos += "</svg>\n";
+                    xml2svg.download(stringDatos,"rutas-"+(indice+1)+".svg","text/plain");
                 }); 
-                download(stringDatos,"rutas.svg","text/plain");
             },error: function(){
-                $("h3").html("¡Tenemos problemas! No se pudo cargar el archivo XML");
+                $("header").after("<h3>¡Tenemos problemas! No se pudo cargar el archivo XML</h3>");
             }
         });
     }
@@ -86,21 +93,32 @@ class XML2SVG {
         var min=9999;
 
         this.altitudes.forEach((value,key) => {
-            if(value > max) { max = value;  maxP = key; }
-            if(value < min) { min = value;  minP = key; }
+            if(value > max) { 
+                max = value;  
+                maxP = key; 
+            }
+            if(value < min) { 
+                min = value;  
+                minP = key; 
+            }
         });
-        
-        this.altitudes[minP] = 150;
-        this.altitudes[maxP] = 10;
+    
+        this.altitudes.set(minP,150);
+        this.altitudes.set(maxP,10);
         
         var diff = max - min;
-        var keys = this.altitudes.keys().filter(key => key !== maxP && key !== minP);
+        var keys = Array.from(this.altitudes.keys()).filter(key => key !== maxP && key !== minP);
+ 
         keys.forEach(key => {
             var a = this.altitudes.get(key);
             var percent = (a - min)/diff;
             var y = (160 * percent);
-            this.altitudes[key] = y < 10 ? 10 : y;
+            y = y < 10 ? 10 : y;
+            y = y > 165 ? 165 : y;
+            this.altitudes.set(key,y);
         });
     }
         
 }
+
+var xml2svg = new XML2SVG();

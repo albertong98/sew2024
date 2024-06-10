@@ -5,24 +5,27 @@ class XML2KML {
     }
     
     cargarDatos(){
+        var xml2kml = this;
         $.ajax({
             dataType: "xml",
             url: 'xml/rutas.xml',
             method: 'GET',
             success: function(datos){
-                let stringDatos = "";
-                stringDatos += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-                stringDatos += "<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n";
-                stringDatos += "<Document id='Universidad de Oviedo'>\n";
-                stringDatos += "<Style id=\"redLine\">";
-                stringDatos += "<LineStyle>\n<color>501400FF</color>\n<width>5</width>\n</LineStyle>\n</Style>\n";
-                $(datos).find("ruta").each(() => {
-                    let nombreRuta = $('nombre',this).text();
-                    let descripcionRuta = $('descripcion',this).text();
-                    let coordenadas = $(this).find('inicio').find('coordenadas');
-                    let latitudInicio = coordenadas.find('latitud').text();
-                    let longitudInicio = coordenadas.find('longitud').text();
-                    let altitudInicio = coordenadas.find('altitud').text();
+                var rutas = $('ruta',datos);
+                rutas.each(function(indice){
+                    var stringDatos = "";
+                    stringDatos += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+                    stringDatos += "<kml xmlns=\"http://www.opengis.net/kml/2.2\">\n";
+                    stringDatos += "<Document id='Universidad de Oviedo'>\n";
+                    stringDatos += "<Style id=\"redLine\">";
+                    stringDatos += "<LineStyle>\n<color>501400FF</color>\n<width>5</width>\n</LineStyle>\n</Style>\n";
+                    var nombreRuta = $('nombre',rutas[indice]).text();
+                    var descripcionRuta =  $('descripcion',rutas[indice]).text();
+                    var inicio = $('inicio',rutas[indice]);
+                    var coordenadasInicio = $('coordenadas',inicio);
+                    var latitudInicio = $('latitud',coordenadasInicio).text();
+                    var longitudInicio = $('longitud',coordenadasInicio).text();
+                    var altitudInicio = $('altitud',coordenadasInicio).text();
 
                     stringDatos += "<Placemark>\n";
                     stringDatos += "<name>"+nombreRuta+"</name>\n";
@@ -35,20 +38,22 @@ class XML2KML {
                     stringDatos += "<coordinates>\n";
                     stringDatos += longitudInicio+","+latitudInicio+","+altitudInicio+"\n";
                     
-                    $(this).find('hitos').find('hito').each(() => {
-                        let coordenadasHito = $(this).find('coordenadas');
-                        let latitudHito = coordenadasHito.find('latitud').text();
-                        let longitudHito = coordenadasHito.find('longitud').text();
-                        let altitudHito = coordenadasHito.find('altitud').text();
-                        kml.Append(longitudHito + "," +latitudHito+","+altitudHito+"\n");
+                    var hitosElement = $('hitos',rutas[indice]);
+                    var hitos = $('hito',hitosElement);
+                    hitos.each(function(hito){
+                        var coordenadasHito = $('coordenadas',hitos[hito]);
+                        var latitudHito = $('latitud',coordenadasHito).text();
+                        var longitudHito = $('longitud',coordenadasHito).text();
+                        var altitudHito = $('altitud',coordenadasHito).text();
+                        stringDatos += longitudHito + "," +latitudHito+","+altitudHito+"\n";
                     });
 
                     stringDatos += "</coordinates>\n";
                     stringDatos += "</LineString>\n</Placemark>\n";
-                }); 
-                download(stringDatos,"rutas.kml","text/plain")
+                    xml2kml.download(stringDatos,"rutas-"+(indice+1)+".kml","text/plain");
+                });
             },error: function(){
-                $("h3").html("¡Tenemos problemas! No se pudo cargar el archivo XML");
+                $("header").after("<h3>¡Tenemos problemas! No se pudo cargar el archivo XML</h3>");
             }
         });
     }
@@ -72,3 +77,5 @@ class XML2KML {
     }
         
 }
+
+var xml2kml = new XML2KML();

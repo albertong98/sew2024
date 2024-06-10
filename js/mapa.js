@@ -7,7 +7,10 @@ class Mapa{
         var latitud="35.88919";
         var longitud="-5.32042";
         var url = `https://maps.googleapis.com/maps/api/staticmap?&key=${this.apikey}&center=${latitud},${longitud}&zoom=13&size=640x480&markers=color:red&sensor=false`;
-        $("section img").last().attr('src',url);
+        var img = document.createElement("img");
+        img.setAttribute("alt","Mapa de Ceuta");
+        img.setAttribute("src",url);
+        $("section").append(img);
     }
 }
 

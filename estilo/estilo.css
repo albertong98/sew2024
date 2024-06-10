@@ -8,7 +8,7 @@ body { /* a = 0 ; b = 0 ; c = 1*/
 h1,h2,h3,nav{/* a = 0 ; b = 0 ; c = 1 */
     background-color:#fecece;
     color: rgb(0, 0, 0);
-    border-radius: 15px;
+    border-radius: 0.6em;
 }
 h1 { /* a = 0 ; b = 0 ; c = 1 */
     text-transform: uppercase;
@@ -31,7 +31,7 @@ nav ul { /* a = 0 ; b = 0 ; c = 2 */
 nav li { /* a = 0 ; b = 0 ; c = 2 */
     text-align: center;
     text-transform: uppercase;
-    font: 1.75vw Tahoma, sans-serif; /*300 20px*/
+    font: 1.55vw Tahoma, sans-serif; /*300 20px*/
     font-weight: bold;
     display: inline-block;
     width: 20%;
@@ -40,20 +40,12 @@ nav li { /* a = 0 ; b = 0 ; c = 2 */
 nav a{ /* a = 0 ; b = 0 ; c = 2 */
     display: block;
 }
-a:link{ /* a = 0 ; b = 1 ; c = 1 */
-    text-decoration: none;
-}
 p, audio, video{ /* a = 0 ; b = 0 ; c = 1 */
     padding: 0.2% 3%
 }
-a:hover{ /* a = 0 ; b = 1 ; c = 1 */
-    background-color: #adadad;
-    color:#000;
-}
-
 table{ /* a = 0 ; b = 0 ; c = 1 */
     border-collapse: collapse;
-    border-radius: 15px;
+    border-radius: 0.6em;
     width: 85%;
     margin-left: 3%;
     margin-right: auto;
@@ -65,11 +57,7 @@ th{ /* a = 0 ; b = 0 ; c = 1 */
     background-color: #670000;
     color: rgb(255, 255, 255);
 }
-tr:nth-child(even) { /* a = 0 ; b = 1 ; c = 1 */
-    background-color: #f2f2f2;
-    color: black;
-}
-tr:nth-child(odd) { /* a = 0 ; b = 1 ; c = 1 */
+tr { /* a = 0 ; b = 0 ; c = 1 */
     background-color: #fab3b3;
     color: black;
 }
@@ -81,7 +69,7 @@ dd{/* a = 0 ; b = 0 ; c = 1 */
     border-right: 1px solid black;
 }
 dd img {/* a = 0 ; b = 0 ; c = 2 */
-    width:  400px;
+    width:  22em;
     height: auto;
     margin-top: 3%;
 }
@@ -93,5 +81,5 @@ video{/* a = 0 ; b = 0 ; c = 1 */
 aside{/* a = 0 ; b = 0 ; c = 1 */
     background-color: #fecece;
     color:#000;
-    border-radius: 15px;
+    border-radius: 0.6em;
 }

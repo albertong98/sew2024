@@ -34,4 +34,4 @@ class Metereologia{
 }
 
 var metereologia = new Metereologia();
-tiempo.prevision();
+metereologia.prevision();

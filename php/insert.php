@@ -43,15 +43,17 @@
 
             $limite = $db->prepare("SELECT limite_ocupacion FROM recurso where recurso_id = ?");
             $limite->bind_param('s', $recursoId);
+            $limite->execute();
             $limiteResult = $limite->get_result();
             $limiteData = $limiteResult->fetch_assoc();
 
             $count = $db->prepare("SELECT COUNT(*) FROM recurso");
+            $count->execute();
             $result = $count->get_result();
             $total=$result->fetch_assoc();
             
-            if($total["data"] < $limiteData["limite_ocupacion"]){
-                $prepare = $db->prepare("INSERT INTO reserva (username,recurso_id, fecha_reserva) VALUES (?,?)");
+            if($total['total'] < $limiteData["limite_ocupacion"]){
+                $prepare = $db->prepare("INSERT INTO reserva (username,recurso_id, fecha_reserva) VALUES (?,?,?)");
             
                 $prepare->bind_param('sss', $username,$recursoId,$fecha);    
 
@@ -70,14 +72,14 @@
         public function insertPresupuesto($record){
             $db = $this->connect();
 
-            $prepare = $db->prepare("INSERT INTO presupuesto (nombre_usuario, precio) VALUES (?,?)");
-            
-            $prepare->bind_param('ss', $record->getUsername(),$record->getPrecio());    
-
+            $prepare = $db->prepare("INSERT INTO presupuesto (presupuesto_id,nombre_usuario,precio) VALUES (?,?,?)");
+            $username =$record->getUsername();
+            $precio = $record->getPrecio();
+            $id=$record->getPresupuestoId();
+            $prepare->bind_param('sss',$id,$username,$precio);
             $prepare->execute();
             
             $prepare->close();
-    
             $db->close();
         }
 

@@ -8,7 +8,7 @@ class Juego{
             var value = respuesta.getAttribute("value");
             contador = mapa.get(key) === value ? contador + 1 : contador;
         });
-        $('h2').text('Tu puntuación es de: '+contador);
+        $('header').after('<h2>Tu puntuación es de: '+contador+'</h2>');
     }
 }
 

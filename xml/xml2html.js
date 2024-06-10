@@ -5,21 +5,24 @@ class XML2HTML{
     }
 
     cargarDatos(){
+        console.log('me ejecuto');
         $.ajax({
             dataType: 'xml',
             url: 'xml/rutas.xml',
             method: 'GET',
             success: function(datos) {
+                console.log('success');
                 var stringDatos = '';
-                $('ruta',datos).each(function(ruta){
-                    var nombre = $('nombre',ruta).text();
-                    var tipo = $('tipo',ruta).text();
-                    var medio = $('medio',ruta).text();
-                    var duracion = $('duracion',ruta).text() + " " + $('duracion',ruta).attr('unidades');
-                    var agencia = $('agencia',ruta).text();
-                    var descripcion = $('descripcion',ruta).text();
-                    var personasAdecuadas = $('personasAdecuadas',ruta).text();
-                    var inicio = $('inicio',ruta);
+                var rutas = $('ruta',datos);
+                rutas.each(function(indice){
+                    var nombre = $('nombre',rutas[indice]).text();
+                    var tipo = $('tipo',rutas[indice]).text();
+                    var medio = $('medio',rutas[indice]).text();
+                    var duracion = $('duracion',rutas[indice]).text() + " " + $('duracion',rutas[indice]).attr('unidades');
+                    var agencia = $('agencia',rutas[indice]).text();
+                    var descripcion = $('descripcion',rutas[indice]).text();
+                    var personasAdecuadas = $('personasAdecuadas',rutas[indice]).text();
+                    var inicio = $('inicio',rutas[indice]);
                     var fechaInicio = $('fecha',inicio).text();
                     var horaInicio = $('hora',inicio).text();
                     var lugarInicio = $('lugar',inicio).text();
@@ -28,9 +31,9 @@ class XML2HTML{
                     var coordenadasInicio = $('coordenadas',inicio);
                     var latitudInicio = $('latitud',coordenadasInicio).text();
                     var longitudInicio = $('longitud',coordenadasInicio).text();
-                    var altitudInicio = $('altura',coordenadasInicio).text() + " " + $('altitud',coordenadasInicio).attr('unidades');
+                    var altitudInicio = $('altitud',coordenadasInicio).text() + " " + $('altitud',coordenadasInicio).attr('unidades');
 
-                    var recomendacion = $('recomendacion',ruta);
+                    var recomendacion = $('recomendacion',rutas[indice]).text();
 
                     stringDatos += "\t<article>\n";
                     stringDatos += "\t\t<h2>";
@@ -56,9 +59,12 @@ class XML2HTML{
 
                     stringDatos += "\t\t\t<ul title=\"Referencias\">\n";
                     
-                    var referencias = $('referencias',ruta);
-                    $('referencia',referencias).each(function(referencia){
-                        var texto = referencia.text();
+                    var referenciasElement = $('referencias',rutas[indice]);
+                    var referencias = $('referencia',referenciasElement)
+                    referencias.each(function(referencia){
+                        console.log(referencias[referencia].textContent);
+                        console.log(referencias[referencia]);
+                        var texto = referencias[referencia].textContent;
                         stringDatos += "\t\t\t\t<li><a href=\""+texto;
 				        stringDatos += "\">" + texto;
 				        stringDatos += "</a></li>\n";
@@ -67,15 +73,16 @@ class XML2HTML{
                     stringDatos += "\t\t\t</ul>\n";
 			        stringDatos += "\t\t</section>";
 
-                    var hitos = $('hitos',ruta);
-                    $('hito',hitos).each(function(hito){
-                        var nombreHito = $('nombre',hito).text();
-                        var descripcionHito = $('descripcion',hito).text();
+                    var hitosElement = $('hitos',rutas[indice]);
+                    var hitos = $('hito',hitosElement);
+                    hitos.each(function(hito){
+                        var nombreHito = $('nombre',hitos[hito]).text();
+                        var descripcionHito = $('descripcion',hitos[hito]).text();
 
-                        var coordenadasHito = $('coordenadas',hito);
+                        var coordenadasHito = $('coordenadas',hitos[hito]);
                         var latitudHito = $('latitud',coordenadasHito).text();
                         var longitudHito = $('longitud',coordenadasHito).text();
-                        var altitudHito = $('altura',coordenadasHito).text() + " " + $('altitud',coordenadasHito).attr('unidades');
+                        var altitudHito = $('altitud',coordenadasHito).text() + " " + $('altitud',coordenadasHito).attr('unidades');
                         
                         stringDatos += "\t\t<section>\n";
                         stringDatos += "\t\t\t<h3>"+ nombreHito +"</h3>\n";
@@ -87,20 +94,21 @@ class XML2HTML{
                         stringDatos += "\t\t\t\t<li><p>Altitud: " + altitudHito + "</p></li>\n";
                         stringDatos += "\t\t\t</ul>\n";
 
-                        var fotos = $('fotos',hito);
-                        
-                        $('foto',fotos).each(function(foto){
-                            var urlFoto = foto.text();
-                            var titulo = foto.attr('titulo');
+                        var fotosElement = $('fotos',hitos[hito]);
+                        var fotos = $('foto',fotosElement);
+                        fotos.each(function(foto){
+                            var urlFoto = "multimedia/imagenes/"+fotos[foto].textContent;
+                            var titulo = fotos[foto].getAttribute('titulo');
                             stringDatos += "\t\t\t<img src=\""+urlFoto;
                             stringDatos += "\" alt = \""+titulo+"\"/>\n";
                         });
 
-                        var videos = $('videos',hito);
-                        if(typeof(videos) != 'undefined' && videos.length > 0){
-                            $('video',videos).each(function(video){
-                                var urlVideo = video.text();
-                                var type = video.attr('type');
+                        var videosElement = $('videos',hitos[hito]);
+                        if(typeof(videosElement) != 'undefined' && videosElement.length > 0){
+                            var videos = $('video',videosElement);
+                            videos.each(function(video){
+                                var urlVideo = "multimedia/videos/"+videos[video].textContent;
+                                var type = videos[video].getAttribute('type');
                                 stringDatos += "\t\t\t<video controls preload=\"auto\"><source src=\"" + urlVideo + "\" type=\""+type+"\">Video no soportado por el navegador</video>\n";
                              });
                         }
@@ -109,10 +117,10 @@ class XML2HTML{
                     });
                         stringDatos += "\t</article>\n";
                 });
-                $("header").after(stringDatos); 
+                $("section").after(stringDatos); 
             },
             error: function() {
-                $("h3").html("¡Tenemos problemas! No se pudo cargar el archivo XML");
+                $("header").after("<h3>¡Tenemos problemas! No se pudo cargar el archivo XML</h3>");
             }
         });
     }
@@ -120,4 +128,4 @@ class XML2HTML{
 
 var lector = new XML2HTML();
 
-window.onload = lector.cargarDatos();
+lector.cargarDatos();
