@@ -46,13 +46,14 @@
                     }
                 echo "<h2>Registarse como usuario</h2>
                 <form action='#' method='post' name='formulario'>
-                    <p>Nombre de usuario</p> 
+                    
                     <p>
-                        <input type='text' name='username'/>
+                        <label for='username'>Nombre de usuario</label> 
+                        <input type='text' name='username' id='username'/>
                     </p>
-                    <p>Contraseña</p> 
                     <p>
-                        <input type='password' name='password'/>
+                        <label for='password'>Contraseña</label> 
+                        <input type='password' name='password' id='password'/>
                     </p>
                     <p>
                         <input type='submit' value='Enviar'/>

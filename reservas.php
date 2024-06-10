@@ -83,8 +83,8 @@
                    
                     echo "<a href='php/generar.php'>Generar BBDD</a><h2>Reserva de recursos turisticos</h2>
                     <form action='#' method='post' name='reserva'>
-                        <p>Recurso</p> 
-                        <p><select name='recurso'>";
+                         
+                        <p><label for='recurso'>Recurso</label><select id='recurso' name='recurso'>";
                     
                     foreach($keys as $key){
                         echo "<option value='",$key,"'>",$key,"</option>";
@@ -92,9 +92,9 @@
 
                      echo "
                         </select></p>
-                        <p>Fecha de la reserva</p> 
                         <p>
-                            <input type='date' name='fecha'/>
+                            <label for='fecha'>Fecha de la reserva</label> 
+                            <input type='date' name='fecha' id='fecha'/>
                         </p>
                         <p>
                             <input type='submit' name='reservar' value='Reservar'/>
@@ -112,13 +112,13 @@
                 }else{
                     echo "<a href='registro.php'>Registrarse como usuario</a><h2>Inicio de sesión</h2>
                     <form action='#' method='post' name='formulario'>
-                        <p>Nombre de usuario</p> 
                         <p>
-                            <input type='text' name='username'/>
+                            <label for='username'>Nombre de usuario</label> 
+                            <input type='text' name='username' id='username'/>
                         </p>
-                        <p>Contraseña</p> 
                         <p>
-                            <input type='password' name='password'/>
+                            <label for='password'>Contraseña</label> 
+                            <input type='password' name='password' id='password'/>
                         </p>
                         <p>
                             <input type='submit' name='login' value='Iniciar sesión'/>
