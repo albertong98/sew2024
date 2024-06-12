@@ -20,7 +20,7 @@ class Noticias{
                 }
             },
             error: function(){
-                $("h3").html("¡Tenemos problemas! No se pudo cargar el tiempo");
+                $("h3").html("¡Tenemos problemas! No se pudieron cargar las noticias");
             }
         });
     }
