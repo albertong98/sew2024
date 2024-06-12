@@ -18,6 +18,7 @@ class TiempoActual{
                 var icon = datos.weather[0].icon;
                 var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
                 var alt = datos.weather[0].description;
+                $('aside').append('<ul></ul>');
                 $('aside > ul').last().append(`<li>Temperatura: ${temperatura} °C</li>`);
                 $('aside > ul').last().append(`<li>Sensacion térmica: ${feelslike} °C</li>`);
                 $('aside > ul').last().append(`<li>Humedad: ${humedad}</li>`);

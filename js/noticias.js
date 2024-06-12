@@ -12,7 +12,8 @@ class Noticias{
             method: 'GET',
             success: function(datos){
                 var date = new Date();
-                $('aside span').last().text(date.toLocaleString('es-ES'));
+                $('aside').append('<p>Última actualizacion de las noticias: '+date.toLocaleString('es-ES')+'</p>');
+                $('aside').append('<ol></ol>');
                 for(var i = 0 ; i < 7 ; i++){
                     var article = datos.articles[i];
                     $('aside > ol').append(`<li><a href=${article.url}>${article.title}</a></li>`);
