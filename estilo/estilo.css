@@ -33,7 +33,6 @@ nav li { /* a = 0 ; b = 0 ; c = 2 */
     text-transform: uppercase;
     font: 1.55vw Tahoma, sans-serif; /*300 20px*/
     font-weight: bold;
-    display: inline-block;
     width: 20%;
     padding: 1% 2%;
 }
