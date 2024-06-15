@@ -5,6 +5,12 @@ body{ /* a = 0 ; b = 0 ; c = 1*/
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
+@media (max-width: 600px) {
+    body { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+    body { grid-template-columns: repeat(2, 1fr); }
+}
 header{ /* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1 ;
     grid-column-end: 5;
