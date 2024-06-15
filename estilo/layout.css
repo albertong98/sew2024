@@ -1,12 +1,17 @@
 /* Alberto Núñez García - UO258455*/
 body{ /* a = 0 ; b = 0 ; c = 1*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+} 
+@media (min-width: 900px) {
+    nav li{
+        display: inline-block;
+    }
 }
 header{ /* a = 0 ; b = 0 ; c = 1 */
-    grid-column-start: 1 ;
+    grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 1;
