@@ -21,7 +21,7 @@ class Noticias{
                 }
             },
             error: function(){
-                $("h3").html("¡Tenemos problemas! No se pudieron cargar las noticias");
+                $('article').append('<section><h3>¡Tenemos problemas! No se pudieron cargar las noticias</h3></section>');
             }
         });
     }
