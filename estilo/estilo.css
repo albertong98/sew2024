@@ -51,7 +51,7 @@ tr { /* a = 0 ; b = 0 ; c = 1 */
 }
 dt{/* a = 0 ; b = 0 ; c = 1 */
     font-weight: bold;
-    padding: 0.2% 3%; 
+    padding: 0.2%; 
 }
 video,img{/* a = 0 ; b = 0 ; c = 1 */
     max-width: 100%; 
