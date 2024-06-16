@@ -5,8 +5,7 @@ h2{
     grid-column-end: -1;
 }
 input{
-    grid-row: 5;
-    grid-column: span 4;
+    grid-column: span 5;
     font-size: xx-large;
     font-weight: bold;
     background-color: aquamarine;

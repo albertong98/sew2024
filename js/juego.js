@@ -9,6 +9,7 @@ class Juego{
             contador = mapa.get(key) === value ? contador + 1 : contador;
         });
         $('header').after('<h2>Tu puntuación es de: '+contador+'</h2>');
+        window.alert('Tu puntuacion es de '+contador);
     }
 }
 

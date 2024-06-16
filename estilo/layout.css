@@ -1,56 +1,56 @@
 /* Alberto Núñez García - UO258455*/
-body{ /* a = 0 ; b = 0 ; c = 1*/
+
+article{ /* a = 0 ; b = 0 ; c = 1 */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-} 
-@media (min-width: 900px) {
-    nav{
-        display: inline-block;
-    }
 }
-header{ /* a = 0 ; b = 0 ; c = 1 */
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-article{ /* a = 0 ; b = 0 ; c = 1 */
+section{/* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1;
     grid-column-end: -1;
-    grid-row-start: 2 ;
-    grid-row-end: 3;
 }
-aside{/* a = 0 ; b = 0 ; c = 1 */
-    grid-column-start: 4;
-    grid-column-end: auto;
-    grid-row-start: 2;
-    grid-row-end: 3;
+nav{/* a = 0 ; b = 0 ; c = 1 */
+    display: grid;
+    grid-template-rows: 1fr;
+}
+@media only screen and (min-width: 300px) {
+    nav{/* a = 0 ; b = 0 ; c = 1 */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 700px) {
+    nav{/* a = 0 ; b = 0 ; c = 1 */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (min-width: 1100px) {
+    nav{/* a = 0 ; b = 0 ; c = 1 */
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+p,fieldset{/* a = 0 ; b = 0 ; c = 1 */
+    grid-column: span 5;
+}
+picture{/* a = 0 ; b = 0 ; c = 1 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2,h3{/* a = 0 ; b = 0 ; c = 1 */
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 footer { /* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1 ;
-    grid-column-end: 5;
+    grid-column-end: -1;
     grid-row-start: 4;
     grid-row-end: 4;
-}
-dl{/* a = 0 ; b = 0 ; c = 1 */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-}
-dt{/* a = 0 ; b = 0 ; c = 1 */
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-dd{/* a = 0 ; b = 0 ; c = 1 */
-    grid-row-start: 2;
-    grid-row-end: 2;
 }
 video{/* a = 0 ; b = 0 ; c = 1 */
     grid-column-start: 1;
     grid-column-end: 5;
 }
-section{
-    grid-row-start: 3;
+body > a {
+    grid-column: span 5;
 }

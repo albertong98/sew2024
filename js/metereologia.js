@@ -13,17 +13,21 @@ class Metereologia{
             method: 'GET',
             success: function(datos) {
                 var list = datos.daily;
+                var i = 0;
                 list.forEach(day => {
-                    var fecha = new Date(day.dt * 1000);
-                    var temperaturaMax = day.temp.max;
-                    var temperaturaMin = day.temp.min;
-                    var humedad = day.humidity;
-                    var icon = day.weather[0].icon;
-                    var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
-                    var alt = day.weather[0].description;
+                    if(i<7){
+                        var fecha = new Date(day.dt * 1000);
+                        var temperaturaMax = day.temp.max;
+                        var temperaturaMin = day.temp.min;
+                        var humedad = day.humidity;
+                        var icon = day.weather[0].icon;
+                        var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
+                        var alt = day.weather[0].description;
 
-                    var html = `<h2>${fecha.toLocaleDateString('es-ES')}</h2><ul><li>Temperatura máxima: ${temperaturaMax} °C</li><li>Temperatura mínima: ${temperaturaMin} °C</li><li>Humedad: ${humedad}</li><li><img src="${iconurl}" alt="${alt}"></li></ul>`
-                    $('section').last().append(html);
+                        var html = `<h2>${fecha.toLocaleDateString('es-ES')}</h2><ul><li>Temperatura máxima: ${temperaturaMax} °C</li><li>Temperatura mínima: ${temperaturaMin} °C</li><li>Humedad: ${humedad}</li><li><img src="${iconurl}" alt="${alt}"></li></ul>`
+                        $('section').last().append(html);
+                        i++
+                    }
                 });
             },
             error: function() {

@@ -9,7 +9,6 @@
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
     <link rel="stylesheet" type="text/css" href="estilo/layout.css">
-    <link rel="stylesheet" type="text/css" href="estilo/carrusel.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Inicio</title>
 </head>
@@ -17,30 +16,27 @@
         <header>
             <h1>Inicio</h1>
             <nav>
-                <ul>
-                    <li><a accesskey="i" tabindex="1" href="index.html">Inicio</a></li> 
-                    <li><a accesskey="g" tabindex="2" href="gastronomia.html">Gastronomía</a></li> 
-                    <li><a accesskey="j" tabindex="3" href="juego.html">Juego</a></li> 
-                    <li><a accesskey="m" tabindex="4" href="metereologia.html">Metereologia</a></li>
-                    <li><a accesskey="r" tabindex="5" href="reservas.php">Reservas</a></li>
-                    <li><a accesskey="t" tabindex="6" href="rutas.html">Rutas</a></li>
-                </ul>
+                <a accesskey="i" tabindex="1" href="index.html">Inicio</a>
+                <a accesskey="g" tabindex="2" href="gastronomia.html">Gastronomía</a>
+                <a accesskey="j" tabindex="3" href="juego.html">Juego</a>
+                <a accesskey="m" tabindex="4" href="metereologia.html">Metereologia</a>
+                <a accesskey="r" tabindex="5" href="reservas.php">Reservas</a>
+                <a accesskey="t" tabindex="6" href="rutas.html">Rutas</a>
             </nav>
         </header>
         <article>
-            <h2>Fotografías turísticas</h2>
-            <img src="multimedia/imagenes/ceuta.jpg" alt="Ciudad de Ceuta">
+            <h2>Informacion principal</h2>
+            <section>
+                <h3>Fotografías turísticas</h3>
+                <picture>
+                    <img src="multimedia/imagenes/ceuta.jpg" alt="Ciudad de Ceuta">
+                </picture>
+            </section>
         </article>
-        <section>
-            <h2>Localización de Ceuta</h2>
-        </section>
-        <aside>
-            <h3>Noticias</h3>
-        </aside>
         <script src="js/carrusel.js"></script>
+        <script src="js/noticias.js"></script>
         <script src="js/actualizacion.js"></script>
         <script src="js/tiempoactual.js"></script>
-        <script src="js/noticias.js"></script>
         <script src="js/mapa.js"></script>
     </body>
 </html>

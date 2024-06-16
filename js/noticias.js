@@ -12,11 +12,12 @@ class Noticias{
             method: 'GET',
             success: function(datos){
                 var date = new Date();
-                $('aside').append('<p>Última actualizacion de las noticias: '+date.toLocaleString('es-ES')+'</p>');
-                $('aside').append('<ol></ol>');
+                $('article').append('<section><h3>Noticias</h3></section>');
+                $('section').last().append('<p>Última actualizacion de las noticias: '+date.toLocaleString('es-ES')+'</p>');
+                $('section').last().append('<ol></ol>');
                 for(var i = 0 ; i < 7 ; i++){
                     var article = datos.articles[i];
-                    $('aside > ol').append(`<li><a href=${article.url}>${article.title}</a></li>`);
+                    $('section > ol').append(`<li><a href=${article.url}>${article.title}</a></li>`);
                 }
             },
             error: function(){

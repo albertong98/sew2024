@@ -22,22 +22,11 @@ h2,h3 { /* a = 0 ; b = 0 ; c = 1 */
 nav { /* a = 0 ; b = 0 ; c = 1 */
     padding: 1% 1%;
 }
-nav ul { /* a = 0 ; b = 0 ; c = 2 */ 
-    list-style-type: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-nav li { /* a = 0 ; b = 0 ; c = 2 */
-    text-align: center;
-    text-transform: uppercase;
-    font: 1.55vw Tahoma, sans-serif; /*300 20px*/
+nav a{
     font-weight: bold;
-    width: 20%;
-    padding: 1% 2%;
-}
-nav a{ /* a = 0 ; b = 0 ; c = 2 */
-    display: block;
+    font-size: xx-large;
+    text-align: center;
+    text-decoration-line: none;
 }
 p, audio, video{ /* a = 0 ; b = 0 ; c = 1 */
     padding: 0.2% 3%
@@ -64,21 +53,7 @@ dt{/* a = 0 ; b = 0 ; c = 1 */
     font-weight: bold;
     padding: 0.2% 3%; 
 }
-dd{/* a = 0 ; b = 0 ; c = 1 */
-    border-right: 1px solid black;
-}
-dd img {/* a = 0 ; b = 0 ; c = 2 */
-    width:  22em;
-    height: auto;
-    margin-top: 3%;
-}
-video{/* a = 0 ; b = 0 ; c = 1 */
-    min-width: 50%; 
-    width: auto; 
+video,img{/* a = 0 ; b = 0 ; c = 1 */
+    max-width: 100%; 
     height: auto; 
-}
-aside{/* a = 0 ; b = 0 ; c = 1 */
-    background-color: #fecece;
-    color:#000;
-    border-radius: 0.6em;
 }

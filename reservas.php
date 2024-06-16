@@ -14,14 +14,12 @@
     <header>
         <h1>Reservas</h1>
         <nav>
-                <ul>
-                    <li><a accesskey="i" tabindex="1" href="index.html">Inicio</a></li> 
-                    <li><a accesskey="g" tabindex="2" href="gastronomia.html">Gastronomía</a></li> 
-                    <li><a accesskey="j" tabindex="3" href="juego.html">Juego</a></li> 
-                    <li><a accesskey="m" tabindex="4" href="metereologia.html">Metereologia</a></li>
-                    <li><a accesskey="r" tabindex="5" href="reservas.php">Reservas</a></li>
-                    <li><a accesskey="t" tabindex="6" href="rutas.html">Rutas</a></li>
-                </ul>
+                <a accesskey="i" tabindex="1" href="index.html">Inicio</a>
+                <a accesskey="g" tabindex="2" href="gastronomia.html">Gastronomía</a>
+                <a accesskey="j" tabindex="3" href="juego.html">Juego</a>
+                <a accesskey="m" tabindex="4" href="metereologia.html">Metereologia</a>
+                <a accesskey="r" tabindex="5" href="reservas.php">Reservas</a>
+                <a accesskey="t" tabindex="6" href="rutas.html">Rutas</a>
             </nav>
     </header>
         <article>
@@ -141,13 +139,12 @@
                         $insert->insertPresupuesto($presupuesto);
 
                         echo "<p>Presupuesto generado</p>";
-    
+                        echo "<table><thead><tr><th scope='col' id='recurso'>Recurso</th><th scope='col' id='precio'>Precio</th></tr></thead><tbody>";
                         foreach($reservas as $reserva){
-
-                            echo "<p>",$recursos[$reserva->getRecursoId()],": ",$reserva->getPrecio()," euros</p>";
+                            echo "<tr><td headers='recurso'>",$recursos[$reserva->getRecursoId()],"</td><td headers='precio'> ",$reserva->getPrecio()," euros</td></tr>";
                         }
     
-                        echo "<p>Total: ",$presupuesto->getPrecio()," euros</p>";
+                        echo "<p>TOTAL: ",$presupuesto->getPrecio()," euros</p>";
                     }else{
                         echo "<p>Sesion caducada</p>";
                     }

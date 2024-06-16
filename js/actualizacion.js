@@ -7,7 +7,7 @@ class UltimaActualizacion{
     aplicarFecha(){
         var p = document.createElement('p');
         p.innerHTML = "Última actualizacion de la pagina: "+this.fechaActual.toLocaleString('es-ES');
-        document.querySelector("aside").append(p);
+        document.querySelector("header").after(p);
     }
 }
 

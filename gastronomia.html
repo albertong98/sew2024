@@ -15,19 +15,17 @@
         <header>
             <h1>Gastronomía</h1>
             <nav>
-                <ul>
-                    <li><a accesskey="i" tabindex="1" href="index.html">Inicio</a></li> 
-                    <li><a accesskey="g" tabindex="2" href="gastronomia.html">Gastronomía</a></li> 
-                    <li><a accesskey="j" tabindex="3" href="juego.html">Juego</a></li> 
-                    <li><a accesskey="m" tabindex="4" href="metereologia.html">Metereologia</a></li>
-                    <li><a accesskey="r" tabindex="5" href="reservas.php">Reservas</a></li>
-                    <li><a accesskey="t" tabindex="6" href="rutas.html">Rutas</a></li>
-                </ul>
+                <a accesskey="i" tabindex="1" href="index.html">Inicio</a>
+                <a accesskey="g" tabindex="2" href="gastronomia.html">Gastronomía</a>
+                <a accesskey="j" tabindex="3" href="juego.html">Juego</a>
+                <a accesskey="m" tabindex="4" href="metereologia.html">Metereologia</a>
+                <a accesskey="r" tabindex="5" href="reservas.php">Reservas</a>
+                <a accesskey="t" tabindex="6" href="rutas.html">Rutas</a>
             </nav>
         </header>
         <article>
             <h2>Multimedia</h2>
-            <p>Archivos multimedia enfocados en mostrar la cultura gastronómica de Ceuta</p>
+            <p>Archivos multimedia que muestran la cultura gastronómica de Ceuta</p>
             <section>
                 <video controls preload="auto">
                     <source src="multimedia/videos/gastronomia.mp4" type="video/mp4">
@@ -39,6 +37,11 @@
                     <source src="multimedia/audios/bocadillo_de_corazones.mp3" type="audio/mpeg">
                     <source src="multimedia/audios/bocadillo_de_corazones.wav" type="audio/wav">
                 </audio>
+                <picture>
+                    <source media="(max-width:799px)" srcset="multimedia/imagenes/50-bocadillo_de_corazones.jpg">
+                    <source media="(min-width:800px)" srcset="multimedia/imagenes/bocadillo_de_corazones.jpg">
+                    <img src="multimedia/imagenes/bocadillo_de_corazones.jpg" alt="Bocadillo de corazones">
+                </picture>
             </section>
 
             <h2>Platos tipicos y sus ingredientes</h2>
@@ -46,16 +49,16 @@
                 <h3>Platos típicos</h3>
                 <dl>
                     <dt>Bocadillo de corazones</dt>
-                    <dd>Bocadillo de corazones de pollo aliñados con especias<img src="multimedia/imagenes/bocadillo_de_corazones.jpg" alt="Imagen de un bocadillo de corazones de pollo"></dd>
+                    <dd>Bocadillo de corazones de pollo aliñados con especias</dd>
     
                     <dt>Papas con choco</dt>
-                    <dd>Guiso tradicional de patatas con sepia<img src="multimedia/imagenes/papas_con_choco.jpg" alt="Imagen de un plato de papas con choco"></dd>
+                    <dd>Guiso tradicional de patatas con sepia</dd>
     
                     <dt>Cuscús de pollo</dt>
-                    <dd>Plato hecho a base de sémola con verduras al vapor y carne de pollo<img src="multimedia/imagenes/couscous.jpg" alt="Imagen de un plato de cuscús de pollo"></dd>
+                    <dd>Plato hecho a base de sémola con verduras al vapor y carne de pollo </dd>
     
                     <dt>Gazpachuelo</dt>
-                    <dd>El gazpachuelo es una sopa caliente típica de pescadores, consistente en un caldo de pescado y mahonesa a base de yema de huevo y aceite de oliva<img src="multimedia/imagenes/gazpachuelo.jpg" alt="Imagen de un plato de gazpachuelo"></dd>
+                    <dd>El gazpachuelo es una sopa caliente típica de pescadores, consistente en un caldo de pescado y mahonesa a base de yema de huevo y aceite de oliva</dd>
                     
                 </dl>
                 <h3>Ingredientes más usados</h3>
